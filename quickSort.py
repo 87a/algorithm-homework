@@ -12,12 +12,12 @@ sys.setrecursionlimit(100000)  # 设置递归层数
 
 
 def quicksort(arr, st, ed):
-    if st == ed - 1 or st == ed:
+    if st == ed - 1 or st == ed:  # 递归出口
         return
-    pivot = arr[st]
-    firstgt = 0
-    gt = 0
-    le = 0
+    pivot = arr[st]  # 设置pivot
+    firstgt = 0  # 第一个大于pivot的位置
+    gt = 0  # 最后一个大于pivot的位置
+    le = 0  # 最后一个小于pivot的位置
     for i in range(st + 1, ed):
         if arr[i] <= pivot:
             le = i
@@ -43,21 +43,20 @@ def quicksort(arr, st, ed):
 
 
 if __name__ == '__main__':
-
-    arr = []
-    right = 0
-    wrong = 0
-    for epoch in range(100):
-        for i in range(100):
-            arr.append(random.randint(0, 1000))
-        sortedarr = sorted(arr)
-        quicksort(arr, 0, len(arr))
-        if sortedarr == arr:
-            right += 1
-        else:
-            wrong += 1
-            print(arr)
-            print(sortedarr)
+    arr = [10, 7, 4, 9, 2, 4, 5, 1, 3, 8]
+    # right = 0
+    # wrong = 0
+    # for epoch in range(100):
+    #     for i in range(100):
+    #         arr.append(random.randint(0, 1000))
+    #     sortedarr = sorted(arr)
+    #     quicksort(arr, 0, len(arr))
+    #     if sortedarr == arr:
+    #         right += 1
+    #     else:
+    #         wrong += 1
+    #         print(arr)
+    #         print(sortedarr)
     # arr = [5, 1, 3, 8, 7, 4, 6, 2]
     # input
     # while True:
@@ -67,10 +66,10 @@ if __name__ == '__main__':
     #     else:
     #         arr.append(int(str))
 
-    # print(arr)
-    # quicksort(arr, 0, len(arr))
+    print(arr)
+    quicksort(arr, 0, len(arr))
 
     # print(sorted(arr))
-    # print(arr)
-    print(right)
-    print(wrong)
+    print(arr)
+    # print(right)
+    # print(wrong)
