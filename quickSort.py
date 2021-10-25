@@ -18,14 +18,14 @@ def quicksort(arr, st, ed):
     firstgt = 0  # 第一个大于pivot的位置
     gt = 0  # 最后一个大于pivot的位置
     le = 0  # 最后一个小于pivot的位置
-    for i in range(st + 1, ed):
-        if arr[i] <= pivot:
+    for i in range(st + 1, ed):  # 主循环
+        if arr[i] <= pivot:  # 找最后一个小于pivot的位置
             le = i
-        if arr[i] > pivot:
+        if arr[i] > pivot:  # 找第一个和最后一个大于pivot的位置
             if firstgt == 0:
                 firstgt = i
             gt = i
-        if le > gt != 0:
+        if le > gt != 0:  # 小大小的情况
             arr[le], arr[firstgt] = arr[firstgt], arr[le]
             le = firstgt
             firstgt += 1
@@ -34,11 +34,11 @@ def quicksort(arr, st, ed):
                 quicksort(arr, st, firstgt - 1)
                 quicksort(arr, firstgt, ed)
                 break
-        if i == ed - 1 and le != 0:
+        if i == ed - 1 and le != 0:  # 最后小的情况
             arr[st], arr[le] = arr[le], arr[st]
             quicksort(arr, st, le)
             quicksort(arr, le + 1, ed)
-        if i == ed - 1 and le == 0:
+        if i == ed - 1 and le == 0:  # 全大的情况
             quicksort(arr, st + 1, ed)
 
 
