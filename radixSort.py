@@ -36,5 +36,5 @@ def radixSort(arr):
 
 
 if __name__ == '__main__':
-    arr = [51, 7, 12, 336, 2, 67, 16, 553]
+    arr = [51, 7, 12, 336, 2, 67, 16, 553, 1111]
     radixSort(arr)
