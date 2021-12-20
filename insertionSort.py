@@ -25,6 +25,7 @@ def insertionSort(arr):
     else:
         # main loop
         for i in range(1, len(arr)):
+            print(arr)
             # swap forward
             for j in range(i, 0, -1):
                 if arr[j] < arr[j - 1]:
@@ -32,4 +33,8 @@ def insertionSort(arr):
                 else:
                     break
     return
-# print(arr)
+
+if __name__ == '__main__':
+    arr = [1430, 3292, 7684, 1338, 193, 595, 4243, 9002, 4393, 130, 1001]
+    insertionSort(arr)
+    print(arr)

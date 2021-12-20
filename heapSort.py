@@ -45,6 +45,7 @@ def heapSort(arr):
     print(f"buildMaxHeap : {arr}")
     heapsize = len(arr)
     for i in range(len(arr) - 1, 0, -1):
+
         arr[i], arr[0] = arr[0], arr[i]
         heapsize -= 1
         maxHeapify(arr, 0, heapsize)
@@ -52,5 +53,5 @@ def heapSort(arr):
 
 
 if __name__ == '__main__':
-    arr = [4, 1, 3, 2, 16, 9, 10, 14, 8, 7]
+    arr = [1430, 3292, 7684, 1338, 193, 595, 4243, 9002, 4393, 130, 1001]
     heapSort(arr)

@@ -23,5 +23,5 @@ def countingSort(A):
 
 
 if __name__ == '__main__':
-    arr = [3, 6, 4, 1, 3, 4, 1, 4]
+    arr = [1430, 3292, 7684, 1338, 193, 595, 4243, 9002, 4393, 130, 1001]
     print(countingSort(arr))
